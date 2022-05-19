@@ -14,11 +14,13 @@
 2. Éxécutez la classe "System" de ce package.
 3. Étudiez le contenu du package "m2dl.pcr.akka.helloworld2".
 4. Éxécutez la classe "System" de ce package. Comment expliquer le comportement du système observé ?
+--> HelloActor reçoit différents messages (noms). Lorsqu'il en reçoit un, il dit "Hello" puis transmet le message à un 
+NameActor, qui lui va afficher le message en question.
 5. Étudiez le contenu du package "m2dl.pcr.akka.helloworld3".
 6. Éxécutez la classe "System" de ce package. Expliquez le comportement du système observé :
-    - que représentent les objets "hello" et "goodbye" ?
-    - que permet de faire l'exécution de "getContext().unbecome()" ?
-    - que signifie l'utilisation du deuxième paramètre de l'appel à "become" dans la définition de l'objet "hello" ?
+    - que représentent les objets "hello" et "goodbye" ? --> les deux comportements de HelloGoodbyeActor
+    - que permet de faire l'exécution de "getContext().unbecome()" ? --> unbecome permet de passer au comportement précédent dans la pile de comportements.
+    - que signifie l'utilisation du deuxième paramètre de l'appel à "become" dans la définition de l'objet "hello" ? --> le booléen définit si le comportement que l'on quitte sera ajouté à la pile de comportements ou non (true = discarded, donc on ne pourra pas y retourner avec unbecome)
 
 #### Exercice 1.2
 
